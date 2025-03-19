@@ -6,20 +6,35 @@
 </template>
 
 <script>
+import { allGameDataResponse } from "@/components/Ob/temp_allgamedata.js";
+
 export default {
   name: "obNormal",
   data() {
-    return {}
+    return {
+      requestInterval: null,
+      allGameData: {},
+    }
   },
-  methods: {},
+  methods: {
+    request_game_data() {
+      this.$axios.get("/api/liveclientdata/allgamedata")
+          .then((res) => {
+            console.log(res);
+            if (res.status === 200) this.allGameData = res.data;
+          })
+          .catch((err) => {
+            console.error(err);
+          });
+    },
+  },
   mounted() {
-    this.$axios.get("/api/liveclientdata/allgamedata")
-      .then((res) => {
-        console.log(res);
-      })
-      .catch((err) => {
-        console.error(err);
-      });
+    // this.request_game_data();
+    // this.requestInterval = setInterval(this.request_game_data, 1000);
+    this.allGameData = allGameDataResponse.data;
+  },
+  beforeDestroy() {
+    clearInterval(this.requestInterval);
   },
 }
 </script>
