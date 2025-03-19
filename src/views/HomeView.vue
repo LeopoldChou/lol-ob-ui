@@ -13,6 +13,15 @@ export default {
   name: 'HomeView',
   components: {
     HelloWorld
+  },
+  mounted() {
+    this.$axios.get("/liveclientdata/allgamedata")
+        .then((res) => {
+          console.log(res);
+        })
+        .catch((err) => {
+          console.error(err);
+        });
   }
 }
 </script>
