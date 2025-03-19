@@ -1,0 +1,31 @@
+:root {
+  /*background-color: #fff;*/
+  /*color: #000;*/
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    /*background-color: #000;*/
+    /*color: #fff;*/
+  }
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family:
+    -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, Oxygen, Ubuntu, "Helvetica Neue", Helvetica, Arial,
+    PingFang SC, Hiragino Sans GB, Source Han Sans CN, Microsoft YaHei UI, Microsoft YaHei, "HarmonyOS Sans",
+    sans-serif;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+a, a:focus, a:hover, a:active, a:visited {
+  text-decoration: none;
+  color: inherit;
+}
