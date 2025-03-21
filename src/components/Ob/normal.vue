@@ -112,11 +112,13 @@ $gap: 8px;
 }
 .top-overview {
   position: fixed;
-  top: 0;
+  top: 8px;
   left: 50%;
   transform: translateX(-50%);
   width: 1400px;
   height: 80px;
+  border-radius: 12px;
+  overflow: hidden;
 }
 .bottom-scoreboard {
   position: fixed;

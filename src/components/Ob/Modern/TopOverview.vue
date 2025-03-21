@@ -1,32 +1,32 @@
 <template>
   <div class="comp-content">
-    <div class="overview-team">
+    <div class="overview-team team-order">
       <div class="team-data">
-        <div class="data-icon">男</div>
+        <img class="data-icon" src="@/assets/images/icons/baron.png" alt=""/>
         <div class="data-value">{{ topOverviewData.teamOrder.baron }}</div>
       </div>
       <div class="team-data">
-        <div class="data-icon">龙</div>
+        <img class="data-icon" src="@/assets/images/icons/dragon.png" alt=""/>
         <div class="data-value">{{ topOverviewData.teamOrder.dragon }}</div>
       </div>
       <div class="team-data">
-        <div class="data-icon">锋</div>
+        <img class="data-icon" src="@/assets/images/icons/riftherald.png" alt=""/>
         <div class="data-value">{{ topOverviewData.teamOrder.xianfeng }}</div>
       </div>
       <div class="team-data">
-        <div class="data-icon">虫</div>
+        <img class="data-icon" src="@/assets/images/icons/grub.png" alt=""/>
         <div class="data-value">{{ topOverviewData.teamOrder.chaochong }}</div>
       </div>
       <div class="team-data">
-        <div class="data-icon">晶</div>
+        <img class="data-icon" src="@/assets/images/icons/inhibitor.png" alt=""/>
         <div class="data-value">{{ topOverviewData.teamOrder.inhib }}</div>
       </div>
       <div class="team-data">
-        <div class="data-icon">塔</div>
+        <img class="data-icon" src="@/assets/images/icons/turret.png" alt=""/>
         <div class="data-value">{{ topOverviewData.teamOrder.turret }}</div>
       </div>
       <div class="team-data">
-        <div class="data-icon">金</div>
+        <img class="data-icon" src="@/assets/images/icons/gold.png" alt=""/>
         <div class="data-value">{{ topOverviewData.teamOrder.gold }}</div>
       </div>
     </div>
@@ -38,33 +38,33 @@
       </div>
       <div class="middle-time">{{ topOverviewData.gameTime }}</div>
     </div>
-    <div class="overview-team">
+    <div class="overview-team team-chaos">
       <div class="team-data">
-        <div class="data-icon">男</div>
+        <img class="data-icon" src="@/assets/images/icons/baron.png" alt=""/>
         <div class="data-value">{{ topOverviewData.teamChaos.baron }}</div>
       </div>
       <div class="team-data">
-        <div class="data-icon">龙</div>
+        <img class="data-icon" src="@/assets/images/icons/dragon.png" alt=""/>
         <div class="data-value">{{ topOverviewData.teamChaos.dragon }}</div>
       </div>
       <div class="team-data">
-        <div class="data-icon">锋</div>
+        <img class="data-icon" src="@/assets/images/icons/riftherald.png" alt=""/>
         <div class="data-value">{{ topOverviewData.teamChaos.xianfeng }}</div>
       </div>
       <div class="team-data">
-        <div class="data-icon">虫</div>
+        <img class="data-icon" src="@/assets/images/icons/grub.png" alt=""/>
         <div class="data-value">{{ topOverviewData.teamChaos.chaochong }}</div>
       </div>
       <div class="team-data">
-        <div class="data-icon">晶</div>
+        <img class="data-icon" src="@/assets/images/icons/inhibitor.png" alt=""/>
         <div class="data-value">{{ topOverviewData.teamChaos.inhib }}</div>
       </div>
       <div class="team-data">
-        <div class="data-icon">塔</div>
+        <img class="data-icon" src="@/assets/images/icons/turret.png" alt=""/>
         <div class="data-value">{{ topOverviewData.teamChaos.turret }}</div>
       </div>
       <div class="team-data">
-        <div class="data-icon">金</div>
+        <img class="data-icon" src="@/assets/images/icons/gold.png" alt=""/>
         <div class="data-value">{{ topOverviewData.teamChaos.gold }}</div>
       </div>
     </div>
@@ -98,26 +98,41 @@ export default {
 .comp-content {
   width: 100%;
   height: 100%;
-  background-color: #012;
+  padding: 6px;
+  background: linear-gradient(to bottom, #012, #0127);
   color: #fff;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 .overview-team {
+  height: 100%;
+  padding: 0 16px;
   display: flex;
-  column-gap: 36px;
+  align-items: center;
+  column-gap: 24px;
+  border-radius: 8px;
+  overflow: hidden;
 }
-.overview-team:last-child {
+.team-order {
+  background: linear-gradient(to left, #4897b5, #4897b577);
+}
+.team-chaos {
+  background: linear-gradient(to right, #b33e44, #b33e4477);
   flex-direction: row-reverse;
 }
 .team-data {
   display: flex;
   column-gap: 8px;
-  font-size: 24px;
 }
-.data-icon {}
-.data-value {}
+.data-icon {
+  width: 28px;
+  height: 28px;
+}
+.data-value {
+  font-size: 28px;
+  line-height: 28px;
+}
 
 .overview-middle {
   width: 160px;
