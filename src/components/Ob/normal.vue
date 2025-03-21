@@ -21,8 +21,8 @@ export default {
       teamMembers: {},
       topOverviewData: {
         gameTime: "00:00",
-        teamOrder: { score: 0, gold: 0, turret: 0, inhib: 0, baron: 0, dragon: 0, xianfeng: 0, chaochong: 0, },
-        teamChaos: { score: 0, gold: 0, turret: 0, inhib: 0, baron: 0, dragon: 0, xianfeng: 0, chaochong: 0, },
+        teamOrder: { score: 0, gold: 0, turret: 0, inhib: 0, baron: 0, dragon: 0, herald: 0, grub: 0, },
+        teamChaos: { score: 0, gold: 0, turret: 0, inhib: 0, baron: 0, dragon: 0, herald: 0, grub: 0, },
       },
     }
   },

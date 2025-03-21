@@ -11,11 +11,11 @@
       </div>
       <div class="team-data">
         <img class="data-icon" src="@/assets/images/icons/riftherald.png" alt=""/>
-        <div class="data-value">{{ topOverviewData.teamOrder.xianfeng }}</div>
+        <div class="data-value">{{ topOverviewData.teamOrder.herald }}</div>
       </div>
       <div class="team-data">
         <img class="data-icon" src="@/assets/images/icons/grub.png" alt=""/>
-        <div class="data-value">{{ topOverviewData.teamOrder.chaochong }}</div>
+        <div class="data-value">{{ topOverviewData.teamOrder.grub }}</div>
       </div>
       <div class="team-data">
         <img class="data-icon" src="@/assets/images/icons/inhibitor.png" alt=""/>
@@ -49,11 +49,11 @@
       </div>
       <div class="team-data">
         <img class="data-icon" src="@/assets/images/icons/riftherald.png" alt=""/>
-        <div class="data-value">{{ topOverviewData.teamChaos.xianfeng }}</div>
+        <div class="data-value">{{ topOverviewData.teamChaos.herald }}</div>
       </div>
       <div class="team-data">
         <img class="data-icon" src="@/assets/images/icons/grub.png" alt=""/>
-        <div class="data-value">{{ topOverviewData.teamChaos.chaochong }}</div>
+        <div class="data-value">{{ topOverviewData.teamChaos.grub }}</div>
       </div>
       <div class="team-data">
         <img class="data-icon" src="@/assets/images/icons/inhibitor.png" alt=""/>
@@ -80,8 +80,8 @@ export default {
       default: () => {
         return {
           gameTime: "00:00",
-          teamOrder: { score: 0, gold: 0, turret: 0, inhib: 0, baron: 0, dragon: 0, xianfeng: 0, chaochong: 0, },
-          teamChaos: { score: 0, gold: 0, turret: 0, inhib: 0, baron: 0, dragon: 0, xianfeng: 0, chaochong: 0, },
+          teamOrder: { score: 0, gold: 0, turret: 0, inhib: 0, baron: 0, dragon: 0, herald: 0, grub: 0, },
+          teamChaos: { score: 0, gold: 0, turret: 0, inhib: 0, baron: 0, dragon: 0, herald: 0, grub: 0, },
         }
       }
     }
